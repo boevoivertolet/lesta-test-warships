@@ -8,6 +8,7 @@ export const api = {
       async getVehicles(): Promise<{ vehicles: Vehicle[] }> {
             const query = `{
         vehicles {
+        isPremium
           id
           title
           description
@@ -21,6 +22,7 @@ export const api = {
             title
             icons {
               default
+              premium
             }
           }
           nation {

@@ -1,8 +1,20 @@
 .icon_lvl_title{
+    font-weight: 600;
+    font-size: 22px;
     display: flex;
-    align-items: start;
+    flex-direction: row;
+    align-items: center;
 
 }
+.icon_lvl_title_premium {
+    font-weight: 600;
+    font-size: 22px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: #ecbc5f;
+}
+
 .icon_lvl_title div{
     margin-right: 15px;
 }

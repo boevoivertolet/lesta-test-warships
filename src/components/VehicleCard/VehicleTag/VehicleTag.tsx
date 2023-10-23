@@ -6,7 +6,7 @@ import {FC} from "react";
 
 export const VehicleTag:FC<VehicleTagType> = ({ vehicle }) => {
       return (
-            <div  className={s.vehicle_tag}>
+            <div  className={vehicle.isPremium ?s.vehicle_tag_premium : s.vehicle_tag}>
                   <div className={s.vehicle_country_tag}>
                         <img src={vehicle.nation.icons.large} alt='#' />
                   </div>

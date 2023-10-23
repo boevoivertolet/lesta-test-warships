@@ -36,6 +36,7 @@ interface VehicleType {
       title: string
       icons: {
             default: string
+            premium: string
       }
 }
 
@@ -51,6 +52,7 @@ interface Nation {
 }
 
 export interface Vehicle {
+      isPremium:boolean
       id: string
       title: string
       description: string

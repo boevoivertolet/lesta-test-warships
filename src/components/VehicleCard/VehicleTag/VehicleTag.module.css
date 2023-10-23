@@ -5,6 +5,17 @@
     height: 250px;
     background: inherit;
     position: relative;
+    text-shadow: black 2px 0 6px;
+}
+.vehicle_tag_premium{
+    padding: 10px;
+    box-sizing: border-box;
+    width: 100%;
+    height: 250px;
+    background: inherit;
+    position: relative;
+    text-shadow: black 1px 0 6px;
+    color: gold;
 }
 
 .vehicle_country_tag img{
