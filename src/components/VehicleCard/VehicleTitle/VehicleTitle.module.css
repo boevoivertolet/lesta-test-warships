@@ -1,0 +1,8 @@
+.icon_lvl_title{
+    display: flex;
+    align-items: start;
+
+}
+.icon_lvl_title div{
+    margin-right: 15px;
+}

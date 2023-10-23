@@ -1,3 +1,4 @@
+import { VehicleCard } from '../components/VehicleCard/VehicleCard'
 import { Vehicle, fetchVehicles } from '../redux/appReducer'
 import { useAppDispatch, useAppSelector } from './store'
 import { useEffect } from 'react'
@@ -11,10 +12,13 @@ export const WarshipsCatalog = () => {
       }, [])
 
       return (
-            <div>
-                  {data.map((el) => (
-                        <div key={el.title}>{el.title}</div>
-                  ))}
+            <div style={{display:'flex', flexDirection:'row', flexWrap:'wrap'}}>
+                  {data &&
+                        data.map((el) => (
+                              <div key={el.id}>
+                                    <VehicleCard vehicle={el} />
+                              </div>
+                        ))}
             </div>
       )
 }

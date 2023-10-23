@@ -8,6 +8,7 @@ export const api = {
       async getVehicles(): Promise<{ vehicles: Vehicle[] }> {
             const query = `{
         vehicles {
+          id
           title
           description
           icons {

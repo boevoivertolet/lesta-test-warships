@@ -1,0 +1,16 @@
+.vehicle_card {
+    margin: 10px;
+    position: inherit;
+    box-sizing: border-box;
+    width: 400px;
+    height: 600px;
+    background: inherit;
+    backdrop-filter: blur(15px)
+}
+
+
+.vehicle_card_description {
+    padding: 13px;
+    text-align: center;
+
+}

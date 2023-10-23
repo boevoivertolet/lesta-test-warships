@@ -2,7 +2,7 @@ import { WarshipsCatalog } from './WarshipsCatalog'
 
 function App() {
       return (
-            <div>
+            <div >
                   <WarshipsCatalog />
             </div>
       )

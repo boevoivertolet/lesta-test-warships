@@ -24,6 +24,7 @@ export const fetchVehicles = (): AppThunk => (dispatch) => {
             return vehicles
       })
 }
+//Interfaces
 
 interface Icon {
       large: string
@@ -50,6 +51,7 @@ interface Nation {
 }
 
 export interface Vehicle {
+      id: string
       title: string
       description: string
       icons: Icon
