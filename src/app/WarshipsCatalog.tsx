@@ -1,25 +1,35 @@
 import { VehicleCard } from '../components/VehicleCard/VehicleCard'
-import { Vehicle, fetchVehicles } from '../redux/appReducer'
-import { useAppDispatch, useAppSelector } from './store'
-import { useEffect } from 'react'
+import { FC } from 'react'
 import s from './WarshipsCatalog.module.css'
+import { FilterBar } from '../components/FilterBar/FilterBar'
+import { FilterType, Vehicle } from '../redux/appReducer'
+import { useAppSelector } from './store'
+import { utils } from '../utils/utils'
 
-export const WarshipsCatalog = () => {
-      const data = useAppSelector<Vehicle[]>((state) => state.app)
-      const dispatch = useAppDispatch()
+export const WarshipsCatalog: FC<WarshipsCatalogType> = ({ vehicles }) => {
+    const filter = useAppSelector<FilterType>((state) => state.app.filter)
 
-      useEffect(() => {
-            dispatch(fetchVehicles())
-      }, [])
+    const filteredVehicles = utils.filter(vehicles, filter)
 
-      return (
-            <div className={s.warships_catalog}>
-                  {data &&
-                        data.map((el) => (
-                              <div key={el.id}>
-                                    <VehicleCard vehicle={el} />
-                              </div>
-                        ))}
+    console.log('отфильтрованные :', filteredVehicles)
+
+    return (
+        <div className={s.warships_catalog}>
+            <div className={s.filter_bar}>
+                <FilterBar />
             </div>
-      )
+            <div className={s.vehicle_cards}>
+                {filteredVehicles &&
+                    filteredVehicles.map((el) => (
+                        <div key={el.id}>
+                            <VehicleCard vehicle={el} />
+                        </div>
+                    ))}
+            </div>
+        </div>
+    )
+}
+
+type WarshipsCatalogType = {
+    vehicles: Vehicle[]
 }
