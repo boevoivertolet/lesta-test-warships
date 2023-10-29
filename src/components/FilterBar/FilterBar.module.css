@@ -10,3 +10,7 @@
     margin: 5px;
 }
 
+.select:hover {
+    background: #4b4b4b;
+}
+
