@@ -56,22 +56,23 @@ export const FilterBar: FC<FilterBarType> = (props) => {
             <img style={{ position: 'fixed', left: '40px', top: '10px' }} src={logo} alt="" />
             <div>
                 <select className={s.select} onChange={onChangeLevelHandler} name="level" id="1">
-                    <option value="0">all levels</option>
-                    <option value="1">1 level</option>
-                    <option value="2">2 level</option>
-                    <option value="3">3 level</option>
-                    <option value="4">4 level</option>
-                    <option value="5">5 level</option>
-                    <option value="6">6 level</option>
-                    <option value="7">7 level</option>
-                    <option value="8">8 level</option>
-                    <option value="9">9 level</option>
-                    <option value="10">10 level</option>
+                    <option value="0">All levels</option>
+                    <option value="1">Level 1</option>
+                    <option value="2">Level 2</option>
+                    <option value="3">Level 3</option>
+                    <option value="4">Level 4</option>
+                    <option value="5">Level 5</option>
+                    <option value="6">Level 6</option>
+                    <option value="7">Level 7</option>
+                    <option value="8">Level 8</option>
+                    <option value="9">Level 9</option>
+                    <option value="10">Level 10</option>
+                    <option value="11">Level 11</option>
                 </select>
             </div>
             <div>
                 <select className={s.select} onChange={onChangeNationHandler} name="nation" id="2">
-                    <option value="">all nations</option>
+                    <option value="">All nations</option>
                     <option value="Japan">Japan</option>
                     <option value="U.S.A.">U.S.A.</option>
                     <option value="U.S.S.R.">U.S.S.R.</option>
@@ -89,7 +90,7 @@ export const FilterBar: FC<FilterBarType> = (props) => {
             </div>
             <div>
                 <select className={s.select} onChange={onChangeTypeHandler} name="type" id="3">
-                    <option value="">all types</option>
+                    <option value="">All types</option>
                     <option value="Submarine">Submarine</option>
                     <option value="Destroyer">Destroyer</option>
                     <option value="Cruiser">Cruiser</option>
