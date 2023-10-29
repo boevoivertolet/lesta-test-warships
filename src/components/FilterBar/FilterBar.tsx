@@ -2,6 +2,7 @@ import React, { ChangeEvent, FC } from 'react'
 import { useAppDispatch, useAppSelector } from '../../app/store'
 import { appActions, FilterType } from '../../redux/appReducer'
 import s from './FilterBar.module.css'
+import logo from '../../assets/images/2023-10-29_20-01-54.png'
 
 export const FilterBar: FC<FilterBarType> = (props) => {
     const dispatch = useAppDispatch()
@@ -52,6 +53,7 @@ export const FilterBar: FC<FilterBarType> = (props) => {
 
     return (
         <div>
+            <img style={{ position: 'fixed', left: '40px', top: '10px' }} src={logo} alt="" />
             <div>
                 <select className={s.select} onChange={onChangeLevelHandler} name="level" id="1">
                     <option value="0">all levels</option>

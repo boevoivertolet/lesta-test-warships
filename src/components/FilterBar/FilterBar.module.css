@@ -1,11 +1,12 @@
 .select {
     font-family: "Bebas", "Arial", sans-serif;
-    font-weight: 700;
+    font-weight: 100;
     color: white;
-    background: #9eb193;
+    background: #333333;
     border-radius: 5px;
     width: 130px;
     height: 30px;
     text-align: center;
+    margin: 5px;
 }
 
