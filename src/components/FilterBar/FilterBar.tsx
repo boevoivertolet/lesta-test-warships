@@ -1,6 +1,7 @@
 import React, { ChangeEvent, FC } from 'react'
 import { useAppDispatch, useAppSelector } from '../../app/store'
 import { appActions, FilterType } from '../../redux/appReducer'
+import s from './FilterBar.module.css'
 
 export const FilterBar: FC<FilterBarType> = (props) => {
     const dispatch = useAppDispatch()
@@ -52,23 +53,23 @@ export const FilterBar: FC<FilterBarType> = (props) => {
     return (
         <div>
             <div>
-                <select onChange={onChangeLevelHandler} name="level" id="1">
-                    <option value="0">level</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                    <option value="9">9</option>
-                    <option value="10">10</option>
+                <select className={s.select} onChange={onChangeLevelHandler} name="level" id="1">
+                    <option value="0">all levels</option>
+                    <option value="1">1 level</option>
+                    <option value="2">2 level</option>
+                    <option value="3">3 level</option>
+                    <option value="4">4 level</option>
+                    <option value="5">5 level</option>
+                    <option value="6">6 level</option>
+                    <option value="7">7 level</option>
+                    <option value="8">8 level</option>
+                    <option value="9">9 level</option>
+                    <option value="10">10 level</option>
                 </select>
             </div>
             <div>
-                <select onChange={onChangeNationHandler} name="nation" id="2">
-                    <option value="">nation</option>
+                <select className={s.select} onChange={onChangeNationHandler} name="nation" id="2">
+                    <option value="">all nations</option>
                     <option value="Japan">Japan</option>
                     <option value="U.S.A.">U.S.A.</option>
                     <option value="U.S.S.R.">U.S.S.R.</option>
@@ -85,8 +86,8 @@ export const FilterBar: FC<FilterBarType> = (props) => {
                 </select>
             </div>
             <div>
-                <select onChange={onChangeTypeHandler} name="type" id="3">
-                    <option value="">type</option>
+                <select className={s.select} onChange={onChangeTypeHandler} name="type" id="3">
+                    <option value="">all types</option>
                     <option value="Submarine">Submarine</option>
                     <option value="Destroyer">Destroyer</option>
                     <option value="Cruiser">Cruiser</option>
